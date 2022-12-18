@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: #d6e4e5;
+  color: #497174;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 24px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.title-container .title {
+  margin-bottom: 0.5rem;
+}
+
+.crossword-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crossword-table {
+  display: flex;
+  flex-direction: column;
+  width: 630px;
+  height: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.crossword-table .row {
+  display: flex;
+}
+.crossword-table .row .square {
+  opacity: 0.2;
+  background-color: #eff5f5;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #497174;
+}
+.crossword-table .row .num {
+  position: relative;
+}
+.crossword-table .row .num::after {
+  content: attr(data-number) "";
+  z-index: 1;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  font-size: 0.7rem;
+  pointer-events: none;
+}
+.crossword-table .row .char {
+  opacity: 1;
+  background-color: #eff5f5;
+  position: relative;
+}
+.crossword-table .row .char .char-input {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #497174;
+  border-radius: 0;
+  text-align: center;
+  caret-color: transparent;
+}
+.crossword-table .row .char .char-input:focus {
+  background-color: #fad4ca;
+  border: 1px solid #497174;
+  border-radius: 0;
+}
+
+.clue-container {
+  display: flex;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp(800px, 70vw, 1200px);
+  margin-bottom: 2rem;
+}
+.clue-container h3 {
+  margin-bottom: 0.5rem;
+}
+.clue-container p {
+  margin-bottom: 0.5rem;
+}
+.clue-container .across {
+  flex: 1;
+  padding: 1rem;
+}
+.clue-container .down {
+  flex: 1;
+  padding: 1rem;
+}
+
+.btn,
+.btn-default {
+  width: 200px;
+  height: 50px;
+  background-color: #eb6440;
+  color: #eff5f5;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+}
+.btn:hover,
+.btn-default:hover {
+  background-color: #ed7757;
+}
+.btn::after,
+.btn-default::after {
+  content: "";
+  position: absolute;
+  bottom: -2%;
+  right: -2%;
+  width: 195px;
+  height: 45px;
+  background-color: #ed7757;
+  border-radius: 0.3rem;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.3;
+}
+.btn:disabled,
+.btn-default:disabled {
+  filter: grayscale(10);
+  cursor: not-allowed;
+}
+.btn:active:not(:disabled),
+.btn-default:active:not(:disabled) {
+  transform: scale(0.95);
+}
+.btn:active:not(:disabled) .btn::after,
+.btn:active:not(:disabled) .btn-default::after,
+.btn-default:active:not(:disabled) .btn::after,
+.btn-default:active:not(:disabled) .btn-default::after {
+  transform: scale(0.95);
+}
+
+#toast {
+  color: white;
+  display: grid;
+  place-content: center;
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 60px;
+  background-color: rgb(66, 189, 66);
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+}
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .clue-container {
+    flex-direction: column;
+  }
+}

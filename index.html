@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossword Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title-container">
+      <h1 class="title">Crossword Puzzle</h1>
+      <h3 class="title title-sub">
+        IEEE GECSKP - IEEE - Information Technology
+      </h3>
+    </div>
+    <div class="crossword-container">
+      <div class="crossword-controls">
+        <button id="clearBtn" class="btn btn-default">Clear Puzzle</button>
+        <div class="score-container">
+          <h6>SCORE</h6>
+          <span class="score-view"><span id="score"></span>/85</span>
+        </div>
+        <button id="checkBtn" class="btn btn-default">Check Answer</button>
+      </div>
+      <div class="crossword-table">
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="1"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="2"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square char num" data-number="3"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char num" data-number="4"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="5"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="6"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="7"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char num" data-number="8"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="9"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="10"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="11"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="12"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square char num" data-number="13"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="14"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char"></div>
+          <div class="square char num" data-number="15"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char num" data-number="16"></div>
+          <div class="square char num" data-number="17"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square char"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+      <div class="clue-container">
+        <div class="across">
+          <h3>Across</h3>
+          <p>
+            <strong>3.</strong>Type of online fraud that involves tricking
+            people into providing sensitive information, such as passwords or
+            credit card numbers, by masquerading as a trustworthy source
+          </p>
+          <p>
+            <strong>5.</strong>What is part of a database that holds only one
+            type of information?
+          </p>
+          <p>
+            <strong>7.</strong>The process to find error in a software code is
+            called?
+          </p>
+          <p>
+            <strong>10.</strong>. A Website on which an individual or group of
+            users record opinions, information, etc. on a regular basis is
+            called a?
+          </p>
+          <p><strong>11.</strong>Which technology is used in a CDROM Drive?</p>
+          <p>
+            <strong>13.</strong>Which smart-phone maker launched the first
+            5Genabled smartphone of India?
+          </p>
+          <p>
+            <strong>14.</strong>Hardware that converts computer's digital signal
+            to an analog signal that can travel over telephone lines
+          </p>
+          <p><strong>16.</strong>. International Business Machines?</p>
+        </div>
+        <div class="down">
+          <h3>Down</h3>
+          <p>
+            <strong>1.</strong>The official language for Android App Development
+            declared by Google in 2019
+          </p>
+          <p><strong>2.</strong>It is also known as half-byte or tetrade</p>
+          <p>
+            <strong>4.</strong>Translates and executes program at run time line
+            by line
+          </p>
+          <p>
+            <strong>6.</strong>Which Indian state uses robots to spread
+            awareness on COVID-19 among the public?
+          </p>
+          <p>
+            <strong>8.</strong>. Company that launched a new file-sharing
+            feature "Nearby Share"?
+          </p>
+          <p>
+            <strong>9.</strong>Number System that computers use to store data
+            and perform calculations?
+          </p>
+          <p>
+            <strong>12.</strong>Type of virus that uses computer hosts to
+            reproduce itself
+          </p>
+          <p><strong>15.</strong>The first web browser</p>
+          <p>
+            <strong>17.</strong>communication system that transfers data between
+            components inside a computer, or between computers
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="toast">KEEP TRYING</div>
+    <script src="script.js"></script>
+  </body>
+</html>
