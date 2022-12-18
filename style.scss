@@ -116,7 +116,7 @@ body {
 .clue-container {
   display: flex;
   font-size: 1.2rem;
-  color: black;
+  color: #000000;
   margin-left: auto;
   margin-right: auto;
   width: clamp(800px, 70vw, 1200px);
@@ -186,7 +186,7 @@ body {
 }
 
 #toast {
-  color: white;
+  color: #FFFFFF;
   display: grid;
   place-content: center;
   position: fixed;
